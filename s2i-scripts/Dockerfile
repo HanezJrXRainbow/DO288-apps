@@ -12,6 +12,9 @@ RUN yum install -y --nodocs nginx && \
  yum clean all
 #RUN sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
 
+RUN chgrp -R 0 /run /var/run && \
+ chmod -R g=u /run /var/run
+
 EXPOSE 8080
 
 COPY nginx.conf /etc/nginx/nginx.conf
