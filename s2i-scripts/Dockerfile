@@ -11,4 +11,4 @@ RUN yum install -y --nodocs nginx && \
 
 EXPOSE 8080
 
-COPY ./s2i/bin/ /usr/libexec/s2i
+COPY ./.s2i/bin/ /usr/libexec/s2i
