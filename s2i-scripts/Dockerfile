@@ -7,7 +7,10 @@ LABEL io.k8s.description="My custom Builder" \
  io.openshift.s2i.scripts-url="image:///usr/libexec/s2i" 
 
 RUN yum install -y --nodocs nginx && \
- yum clean all
+ yum clean all && \
+ sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
+
+RUN 
 
 EXPOSE 8080
 
