@@ -6,8 +6,7 @@ LABEL io.k8s.description="My custom Builder" \
  io.openshift.tags="builder,webserver,html,nginx" \
  io.openshift.s2i.scripts-url="image:///usr/libexec/s2i" 
 
-RUN yum install -y epel-release && \ 
- yum install -y --nodocs nginx && \
+RUN yum install -y --nodocs nginx && \
  yum clean all
 
 EXPOSE 8080
