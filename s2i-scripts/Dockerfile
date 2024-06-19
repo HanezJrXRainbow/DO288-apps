@@ -9,8 +9,8 @@ LABEL io.k8s.description="My custom Builder" \
 USER root
 
 RUN yum install -y --nodocs nginx && \
- yum clean all && \
- sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
+ yum clean all
+RUN sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
