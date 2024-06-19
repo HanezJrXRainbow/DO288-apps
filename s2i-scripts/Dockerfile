@@ -6,14 +6,14 @@ LABEL io.k8s.description="My custom Builder" \
  io.openshift.tags="builder,webserver,html,nginx" \
  io.openshift.s2i.scripts-url="image:///usr/libexec/s2i" 
 
-USER root
-
 RUN yum install -y --nodocs nginx && \
  yum clean all
 #RUN sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
 
 RUN chgrp -R 0 /run /var/run && \
  chmod -R g=u /run /var/run
+
+USER 1001
 
 EXPOSE 8080
 
