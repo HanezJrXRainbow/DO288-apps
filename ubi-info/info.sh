@@ -8,3 +8,6 @@ grep '^Mem' /proc/meminfo
 echo
 echo '--- Mounted file systems (partial)'
 df -h
+echo
+echo '--- Task Completed'
+tail -f /dev/null
