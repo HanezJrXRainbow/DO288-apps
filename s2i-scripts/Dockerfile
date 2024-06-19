@@ -10,8 +10,9 @@ USER root
 
 RUN yum install -y --nodocs nginx && \
  yum clean all
-RUN sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
+#RUN sed -i "s/Listen 80/Listen 8080/g" /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY ./.s2i/bin/ /usr/libexec/s2i
