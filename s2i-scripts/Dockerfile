@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel8/nginx-124:1-137
+FROM registry.access.redhat.com/ubi8/ubi:8.10-901.1717584420
 
 LABEL io.k8s.description="My custom Builder" \
  io.k8s.display-name="Nginx 1.6.3" \
