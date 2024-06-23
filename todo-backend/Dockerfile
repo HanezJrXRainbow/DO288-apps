@@ -14,9 +14,9 @@ RUN cd /opt/app-root/src && \
     npm install && \
     npm run build
 
-ENV DATABASE_SVC=192.168.0.10
-ENV DATABASE_PORT=3306
-ENV DATABASE_PASSWORD=secret-pass
+#ENV DATABASE_SVC=192.168.0.10
+#ENV DATABASE_PORT=3306
+#ENV DATABASE_PASSWORD=secret-pass
 ENV PORT=3000
 
 EXPOSE 3000
