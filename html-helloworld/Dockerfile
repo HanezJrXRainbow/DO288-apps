@@ -4,7 +4,8 @@ FROM registry.access.redhat.com/ubi8/ubi:latest
 
 RUN dnf -y update && \
     dnf -y install httpd && \
-    dnf clean all
+    dnf clean all && \
+    chmod -R 1001:0 /run
     
 COPY index.html /var/www/html/
 
