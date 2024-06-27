@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi:8
+FROM registry.access.redhat.com/ubi8/ubi:latest
 
 #WORKDIR /opt/app-root/
 
